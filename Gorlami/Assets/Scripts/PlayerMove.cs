@@ -62,14 +62,17 @@ public class PlayerMove : MonoBehaviour
             rb.AddForce(Vector3.up*Mathf.Sqrt(2f*Physics.gravity.magnitude*jumpHeight),ForceMode.VelocityChange);
         }
 
+        
+
     }
 
     void FixedUpdate()
     {
+
         Vector3 move = transform.right * MoveSideways + transform.forward * MoveForvard;
 
 
-        rb.MovePosition((transform.position + move*velocity * Time.fixedDeltaTime) );
 
+        rb.MovePosition((transform.position + move * velocity * Time.fixedDeltaTime));
     }
 }

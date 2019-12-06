@@ -96,7 +96,6 @@ GameObject:
   - component: {fileID: 6927731092813462095}
   - component: {fileID: 6927731092813462088}
   - component: {fileID: 6927731092813462089}
-  - component: {fileID: 6927731092813462092}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -196,27 +195,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &6927731092813462092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6927731092813462090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f0fdd3f175ca734c8bea5aef78d2a8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundCheck: {fileID: 6927731093002566480}
-  jumpHeight: 2
-  groundDistance: 0.2
-  velocity: 5
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 256
-  cameraTransform: {fileID: 6927731092111123571}
-  sensitivity: 100
 --- !u!1 &6927731093002566481
 GameObject:
   m_ObjectHideFlags: 0
