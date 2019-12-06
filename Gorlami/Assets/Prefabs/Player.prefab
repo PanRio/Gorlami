@@ -209,9 +209,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundCheck: {fileID: 6927731093002566480}
-  jumpHeight: 10
+  jumpHeight: 2
   groundDistance: 0.2
-  velocity: 20
+  velocity: 5
   layerMask:
     serializedVersion: 2
     m_Bits: 256
