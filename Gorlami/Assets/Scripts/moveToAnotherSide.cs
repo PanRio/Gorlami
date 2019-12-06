@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwitchPerson : MonoBehaviour {
+public class moveToAnotherSide : MonoBehaviour
+{
 
     public bool isDarkState = false;//1-ciemny . 0-jasny
     public Transform camera;
@@ -25,10 +26,10 @@ public class SwitchPerson : MonoBehaviour {
                 isDarkState = true;
                 camera.transform.localPosition = new Vector3(camera.transform.localPosition.x,camera.transform.localPosition.y,camera.transform.localPosition.z + distanceBetweenScean); //SetParent localScale.Set(0,4,0);
             }
-            
+
         }
     }
-
+    /*
     static bool moveToAnotherSide(Transform t,float distanceBetweenScean,bool isDarkState) {
         if(isDarkState) {
             isDarkState = false;
@@ -42,4 +43,5 @@ public class SwitchPerson : MonoBehaviour {
 
         return true;
     }
+    */
 }
