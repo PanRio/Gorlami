@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     float MoveSideways;
 
     public Transform groundCheck;
-    public float jumpForce = 10f;
+    public float jumpHeight = 10f;
 
     bool isGrounded;
     public float groundDistance = 0.4f;
@@ -39,9 +39,11 @@ public class PlayerMove : MonoBehaviour
     {
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance,layerMask);
-
-        MoveForvard = Input.GetAxis("Vertical");
-        MoveSideways = Input.GetAxis("Horizontal");
+        if (isGrounded)
+        {
+            MoveForvard = Input.GetAxis("Vertical");
+            MoveSideways = Input.GetAxis("Horizontal");
+        }
 
         mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * sensitivity;
         mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * sensitivity;
@@ -57,7 +59,7 @@ public class PlayerMove : MonoBehaviour
         {
             Debug.Log("Jump");
 
-            rb.AddForce(Vector3.up*jumpForce,ForceMode.Impulse);
+            rb.AddForce(Vector3.up*Mathf.Sqrt(2f*Physics.gravity.magnitude*jumpHeight),ForceMode.VelocityChange);
         }
 
     }
