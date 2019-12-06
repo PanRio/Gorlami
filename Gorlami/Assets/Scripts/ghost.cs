@@ -12,11 +12,10 @@ public class ghost : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
+    void LateUpdate() {
        // float temp = player.GetComponent<moveToAnotherSide>().distanceBetweenScean;
-        float a =player.transform.localPosition.x;
-        float b =ghostt.transform.localPosition.x;
-        //ghostt.transform.localPosition = new Vector3(player.transform.localPosition.x,player.transform.localPosition.y,player.transform.localPosition.z + 11); //SetParent localScale.Set(0,4,0);    
+
+        player.localPosition = new Vector3(player.localPosition.x,player.localPosition.y,player.localPosition.z - player.GetComponent<moveToAnotherSide>().distanceBetweenScean);
     }
 }
 
