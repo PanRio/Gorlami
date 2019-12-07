@@ -6286,9 +6286,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dff61fa1b5e240b42ab6d7aa3fc5e3d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialRed: {fileID: 0}
+  materialRed: {fileID: 2100000, guid: c2f765d8276b9e644bf47af9e63d9a78, type: 2}
   Spikes: {fileID: 565597365}
-  materialGreen: {fileID: 0}
+  materialGreen: {fileID: 2100000, guid: 2dc3892a23f9a464cb5fb41f8313b80d, type: 2}
 --- !u!82 &1817019822
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13863,9 +13863,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dff61fa1b5e240b42ab6d7aa3fc5e3d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialRed: {fileID: 0}
+  materialRed: {fileID: 2100000, guid: c2f765d8276b9e644bf47af9e63d9a78, type: 2}
   Spikes: {fileID: 1664268836}
-  materialGreen: {fileID: 0}
+  materialGreen: {fileID: 2100000, guid: 2dc3892a23f9a464cb5fb41f8313b80d, type: 2}
 --- !u!1 &1705192259637430726
 GameObject:
   m_ObjectHideFlags: 0
@@ -13920,9 +13920,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2474f00323114a44a8e28c0e79ec1e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialRed: {fileID: 0}
+  materialRed: {fileID: 2100000, guid: c2f765d8276b9e644bf47af9e63d9a78, type: 2}
   Dorki: {fileID: 198081686}
-  materialGreen: {fileID: 0}
+  materialGreen: {fileID: 2100000, guid: 2dc3892a23f9a464cb5fb41f8313b80d, type: 2}
 --- !u!65 &1736345700827267960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14039,9 +14039,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2474f00323114a44a8e28c0e79ec1e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialRed: {fileID: 0}
+  materialRed: {fileID: 2100000, guid: c2f765d8276b9e644bf47af9e63d9a78, type: 2}
   Dorki: {fileID: 162319877}
-  materialGreen: {fileID: 0}
+  materialGreen: {fileID: 2100000, guid: 2dc3892a23f9a464cb5fb41f8313b80d, type: 2}
 --- !u!54 &1736345700827267967
 Rigidbody:
   m_ObjectHideFlags: 0
