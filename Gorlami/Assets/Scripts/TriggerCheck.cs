@@ -4,22 +4,40 @@ using UnityEngine;
 
 public class TriggerCheck : MonoBehaviour
 {
-    Material materialRed;
+    public Material materialRed;
+    public GameObject Dorki;
     public Material materialGreen;
+
+   
 
     public Collider col;
     // Start is called before the first frame update
     void Start()
     {
-        materialRed = GetComponent<Material>();
+        
     }
 
-    void OnCollisionEnter(Collision colider)
+    void OnTriggerEnter(Collider colider)
     {
-        Debug.Log(colider.gameObject.name);
+       
+
+        
+
+        Dorki.GetComponent<Animator>().SetBool("DorState", true);
+        gameObject.GetComponent<MeshRenderer>().material = materialGreen;
+        
     }
 
-    // Update is called once per frame
+    void OnTriggerExit(Collider col)
+    {
+        Dorki.GetComponent<Animator>().SetBool("DorState", false);
+        gameObject.GetComponent<MeshRenderer>().material = materialRed;
+    }
+
+
+
+
+        // Update is called once per frame
     void Update()
     {
         
