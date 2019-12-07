@@ -43,9 +43,10 @@ GameObject:
   - component: {fileID: 4026058717523508868}
   - component: {fileID: 4026058717523508869}
   - component: {fileID: 6126105836427653579}
+  - component: {fileID: 4448011087800166143}
   m_Layer: 0
   m_Name: PlayerNEW
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,6 +136,18 @@ MonoBehaviour:
   isDarkState: 0
   player: {fileID: 4026058717523508870}
   distanceBetweenScean: 11
+--- !u!114 &4448011087800166143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4026058717523508890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a51672919acda947ae87fae152df209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4026058717753848264
 GameObject:
   m_ObjectHideFlags: 0
