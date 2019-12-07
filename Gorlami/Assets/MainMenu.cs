@@ -9,6 +9,8 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     public void PlayGame()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        
     }
 }
