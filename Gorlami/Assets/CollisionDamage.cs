@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using UnityEngine.SceneManagement;
+using UnityEngine;
+
 
 public class CollisionDamage : MonoBehaviour
 {
@@ -9,7 +11,9 @@ public class CollisionDamage : MonoBehaviour
     {
         if (hit.gameObject.tag == "enemy")
         {
-            transform.position = respawn.transform.position;
+            //transform.position = respawn.transform.position;
+            //SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
    }
 }
