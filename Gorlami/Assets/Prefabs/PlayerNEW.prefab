@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 1924846471879362028}
   m_Layer: 0
   m_Name: PlayerNEW
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 4026058717753848267}
   - component: {fileID: 4026058717753848309}
   - component: {fileID: 4026058717753848266}
-  - component: {fileID: 7329844096337854412}
+  - component: {fileID: 5683389737067731118}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -288,7 +288,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4026058717753848264}
   m_Enabled: 1
---- !u!114 &7329844096337854412
+--- !u!114 &5683389737067731118
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
