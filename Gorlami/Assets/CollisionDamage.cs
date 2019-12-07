@@ -2,13 +2,14 @@
 
 public class CollisionDamage : MonoBehaviour
 {
+
+    [SerializeField] private Transform respawn;
+
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.gameObject.tag == "enemy")
         {
-            Debug.Log("uderzyłęs");
-            Destroy(gameObject);
-            // a rigidbody tagged as "Ball" hit the player
+            transform.position = respawn.transform.position;
         }
-    }
+   }
 }
