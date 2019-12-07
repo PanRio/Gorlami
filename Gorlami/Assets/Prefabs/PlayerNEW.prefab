@@ -100,10 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 4026058717523508871}
-  speed: 12
-  gravity: -9.18
+  speed: 10
+  gravity: -60
   groundCheck: {fileID: 4026058717256741315}
-  groundDistance: 0.4
+  groundDistance: 0.45
   groundMask:
     serializedVersion: 2
     m_Bits: 256
