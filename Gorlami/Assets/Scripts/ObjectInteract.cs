@@ -7,12 +7,18 @@ public class ObjectInteract : MonoBehaviour
     public Camera camera;
 
     public LayerMask interactMask;
-    GameObject holdingObj = null;
+    public GameObject holdingObj = null;
 
     bool isHolding = false;
 
     public float distanceToObj = 10f;
     public float holdingOffset = 2f;
+
+    public float lerpingTime = 1f;
+    float LPT;
+    public float lerpingTimeStrenght = 20f;
+
+    Rigidbody ObjRB;
 
     // Start is called before the first frame update
     void Start()
@@ -31,10 +37,16 @@ public class ObjectInteract : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.transform.gameObject.layer == interactMask)
+                    if (hit.transform.gameObject.tag == "Box")
                     {
                         holdingObj = hit.transform.gameObject;
                         isHolding = true;
+                        LPT = lerpingTime;
+                        if(holdingObj.GetComponent<Rigidbody>() != null)
+                        {
+                            ObjRB = holdingObj.GetComponent<Rigidbody>();
+                            ObjRB.useGravity = false;
+                        }
                     }
 
                     Debug.Log("HIT " + hit.transform.name);
@@ -48,21 +60,31 @@ public class ObjectInteract : MonoBehaviour
             {
                 isHolding = false;
                 holdingObj = null;
+                if (ObjRB != null) ObjRB.useGravity = true;
             }
 
         }
 
        
 
-        
-        Debug.Log(camera.transform.rotation.eulerAngles);
-        Debug.Log(camera.transform.forward);
+       
 
         if (isHolding)
         {
-            holdingObj.transform.position = camera.transform.position + camera.transform.forward * holdingOffset;
-            holdingObj.transform.rotation.SetEulerAngles(camera.transform.rotation.eulerAngles);
+            if (LPT>0)
+            {
+                holdingObj.transform.position = Vector3.Lerp(holdingObj.transform.position, camera.transform.position + camera.transform.forward * holdingOffset,lerpingTimeStrenght*Time.deltaTime);
+                holdingObj.transform.eulerAngles = Vector3.Lerp(holdingObj.transform.eulerAngles, camera.transform.eulerAngles, lerpingTimeStrenght*Time.deltaTime*2); ;
+            }
+            else
+            {
+                holdingObj.transform.position = camera.transform.position + camera.transform.forward * holdingOffset;
+                holdingObj.transform.eulerAngles = camera.transform.eulerAngles;
+            }
         }
+
+
+        LPT -= Time.deltaTime;
 
     }
    
