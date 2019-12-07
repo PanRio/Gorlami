@@ -1,14 +1,18 @@
-﻿using UnityEngine;
+﻿using UnityEngine.SceneManagement;
+using UnityEngine;
+
 
 public class CollisionDamage : MonoBehaviour
 {
+
+
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.gameObject.tag == "enemy")
         {
-            Debug.Log("uderzyłęs");
-            Destroy(gameObject);
-            // a rigidbody tagged as "Ball" hit the player
+            //transform.position = respawn.transform.position;
+            //SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-    }
+   }
 }
