@@ -6,25 +6,27 @@ public class moveToAnotherSide : MonoBehaviour
 {
 
     public bool isDarkState = false;//1-ciemny . 0-jasny
-    public Transform camera;
-    public float distanceBetweenScean = 55f;
+    public Transform player;
+    public float distanceBetweenScean = 11f;
     // Start is called before the first frame update
     void Start() {
 
     }
 
     // Update is called once per frame
-    void Update() {
+    void LateUpdate() {
         if(Input.GetKeyDown(KeyCode.E)) {
-            //moveToAnotherSide(camera,distanceBetweenScean,isDarkState);/*
+            
             if(isDarkState) {
                 isDarkState = false;
-                camera.transform.localPosition = new Vector3(camera.transform.localPosition.x,camera.transform.localPosition.y,camera.transform.localPosition.z - distanceBetweenScean); //SetParent localScale.Set(0,4,0);
+                player.localPosition = new Vector3(player.localPosition.x,player.localPosition.y,player.localPosition.z - distanceBetweenScean);
+    
             }
 
             else {
                 isDarkState = true;
-                camera.transform.localPosition = new Vector3(camera.transform.localPosition.x,camera.transform.localPosition.y,camera.transform.localPosition.z + distanceBetweenScean); //SetParent localScale.Set(0,4,0);
+                player.localPosition = new Vector3(player.localPosition.x,player.localPosition.y,player.localPosition.z + distanceBetweenScean);
+                
             }
 
         }
