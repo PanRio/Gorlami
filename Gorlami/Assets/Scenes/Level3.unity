@@ -15313,6 +15313,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4026058717523508868, guid: 15c6fefc284861642af6b47e49862f77,
+        type: 3}
+      propertyPath: groundDistance
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4026058717523508870, guid: 15c6fefc284861642af6b47e49862f77,
         type: 3}
       propertyPath: m_LocalPosition.x
