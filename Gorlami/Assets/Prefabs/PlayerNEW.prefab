@@ -136,6 +136,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDarkState: 0
   player: {fileID: 4026058717523508870}
+  ghost: {fileID: 2274947721331167534, guid: 4ebaa55fb71f6e545b363a2b509ec8df, type: 3}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
   distanceBetweenScean: 11
 --- !u!114 &2592053859126498246
 MonoBehaviour:
@@ -153,8 +157,11 @@ MonoBehaviour:
   interactMask:
     serializedVersion: 2
     m_Bits: 0
+  holdingObj: {fileID: 0}
   distanceToObj: 10
   holdingOffset: 2
+  lerpingTime: 1
+  lerpingTimeStrenght: 20
 --- !u!114 &8928772633078443052
 MonoBehaviour:
   m_ObjectHideFlags: 0
