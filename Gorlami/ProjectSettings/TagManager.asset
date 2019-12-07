@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Box
+=======
+  - enemy
+>>>>>>> master
   layers:
   - Default
   - TransparentFX
