@@ -14,7 +14,7 @@ public class SpikesHideScript : MonoBehaviour
     }
 
     void OnTriggerExit(Collider col) {
-        Spikes.gameObject.SetActive(false);
+        Spikes.gameObject.SetActive(true);
         gameObject.GetComponent<MeshRenderer>().material = materialRed;
     }
 
