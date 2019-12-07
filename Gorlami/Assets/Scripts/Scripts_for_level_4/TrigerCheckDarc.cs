@@ -10,7 +10,7 @@ public class TrigerCheckDarc : MonoBehaviour
     public Material materialGreen;
 
     void OnTriggerEnter(Collider colider) {
-        if(colider.gameObject.tag == "CubeBlack") {
+        if(colider.gameObject.name != "CubeBlack") {
             Dorki.GetComponent<Animator>().SetBool("DorState",true);
             gameObject.GetComponent<MeshRenderer>().material = materialGreen;
         }
@@ -19,7 +19,7 @@ public class TrigerCheckDarc : MonoBehaviour
     }
 
     void OnTriggerExit(Collider colider) {
-        if(colider.gameObject.name == "CubeBlack") {
+        if(colider.gameObject.name != "CubeBlack") {
             Dorki.GetComponent<Animator>().SetBool("DorState",false);
             gameObject.GetComponent<MeshRenderer>().material = materialRed;
         }

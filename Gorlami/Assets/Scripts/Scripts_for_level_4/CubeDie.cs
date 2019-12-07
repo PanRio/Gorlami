@@ -15,7 +15,6 @@ public class CubeDie : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision) {
         if(collision.gameObject.tag == "enemy") {
-            Debug.Log("nareszcie");
             cube.localPosition = start;
         }
     }
